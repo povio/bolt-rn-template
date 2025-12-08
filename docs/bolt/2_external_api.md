@@ -6,7 +6,7 @@ Use this mode when the backend is already developed or being developed in parall
 
 # Setup
 
-1. **Initialize project in Bolt**: http://bolt.new/github.com/poviolabs/bolt-template/tree/external-be
+1. **Initialize project in Bolt**: http://bolt.new/github.com/povio/bolt-rn-template/tree/external-be
 
 2. **Configure OpenAPI codegen**
 

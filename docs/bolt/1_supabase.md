@@ -6,7 +6,7 @@ Use this mode when starting a new project where the backend doesn't exist yet. Y
 
 # Setup
 
-**Initialize project in Bolt**: http://bolt.new/github.com/poviolabs/bolt-template **TODO CHANGE**
+**Initialize project in Bolt**: http://bolt.new/github.com/povio/bolt-rn-template
 
 # Common Issues
 

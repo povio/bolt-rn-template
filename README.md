@@ -22,7 +22,7 @@ This template supports two distinct development workflows:
 **Get started:**
 
 ```
-http://bolt.new/github.com/poviolabs/bolt-rn-template
+http://bolt.new/github.com/povio/bolt-rn-template
 ```
 
 📖 **[Read the full Mode 1 documentation](docs/bolt/1_supabase.md)**
@@ -36,7 +36,7 @@ http://bolt.new/github.com/poviolabs/bolt-rn-template
 **Get started:**
 
 ```
-http://bolt.new/github.com/poviolabs/bolt-rn-template/tree/external-be
+http://bolt.new/github.com/povio/bolt-rn-template/tree/external-be
 ```
 
 📖 **[Read the full Mode 2 documentation](docs/bolt/2_external_api.md)**
