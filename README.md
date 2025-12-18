@@ -19,11 +19,7 @@ This template supports two distinct development workflows:
 
 **When to use:** Starting a new project where the backend doesn't exist yet. You'll develop the frontend with a temporary Supabase backend, then generate an OpenAPI specification for the backend team to implement.
 
-**Get started:**
-
-```
-http://bolt.new/github.com/povio/bolt-rn-template
-```
+**Get started:** http://bolt.new/github.com/povio/bolt-rn-template
 
 📖 **[Read the full Mode 1 documentation](docs/bolt/1_supabase.md)**
 
@@ -33,13 +29,17 @@ http://bolt.new/github.com/povio/bolt-rn-template
 
 **When to use:** Backend is already developed or being developed in parallel and is deployed with an accessible OpenAPI specification endpoint.
 
-**Get started:**
-
-```
-http://bolt.new/github.com/povio/bolt-rn-template/tree/external-be
-```
+**Get started:** http://bolt.new/github.com/povio/bolt-rn-template/tree/external-be
 
 📖 **[Read the full Mode 2 documentation](docs/bolt/2_external_api.md)**
+
+---
+
+## Prompting & Design Guide
+
+**Essential reading:** Best practices for prompting Bolt effectively, choosing AI models, using planning mode, and implementing designs.
+
+📖 **[Read the Prompting Guide](docs/bolt/3_prompting_design.md)**
 
 ---
 
@@ -51,7 +51,7 @@ The template comes with a pre-implemented example "flowers" feature with screens
 
 ## Additional Resources
 
-- **Mode-specific Documentation**: `docs/bolt/` directory
+- **Bolt Documentation**: `docs/bolt/` directory
 - **General Bolt rules**: `.bolt/prompt`
 
 ---

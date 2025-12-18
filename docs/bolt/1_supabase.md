@@ -19,10 +19,7 @@ These are common pitfalls and bugs you might encounter. Click to jump to detaile
 
 # Prompting
 
-- Keep prompts to max one new feature at a time
-- When fixing bugs, give more technical directions on how to fix if possible
-- After each prompt Bolt creates a checkpoint that you can revert back to
-- You can also edit code manually and run commands in the terminal
+For general prompting tips, AI model selection, and planning mode, see the **[Prompting Guide](./3_prompting_design.md)**.
 
 ## First Prompt
 
@@ -33,27 +30,6 @@ Build me an app named ... which will have the features ... Start with the user a
 ```
 
 Bolt should replace the mock authentication code with its Supabase integration. Make sure it did this step correctly (check Authentication section).
-
-## Design & Styling
-
-By default, Bolt apps may look "bland" because the AI by default only styles components via props from the generated theme (Atlas defaults unless changed).
-
-**If you have a design or concept available:**
-
-- Generate your theme from Figma and override the defaults
-- Provide Bolt with screenshots, mockups, or design references
-- Tell it explicitly to match the design, including colors
-- Bolt will implement the design and use appropriate colors beyond blue
-- If allowed, you may tell it to use `style` overrides on the components to give it more freedom
-
-Example:
-
-```
-Here's a screenshot of the design I want. Implement this page matching the design,
-including the color scheme shown in the image.
-```
-
----
 
 # Rules & Possible Pitfalls
 

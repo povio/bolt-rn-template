@@ -38,11 +38,7 @@ These are common pitfalls and bugs you might encounter. Click to jump to detaile
 
 # Prompting
 
-- Keep prompts to max one new feature at a time
-- If Bolt can't find the correct queries/models to use for a feature, tell it explicitly what to use
-- When fixing bugs, give more technical directions on how to fix if possible
-- After each prompt Bolt creates a checkpoint that you can revert back to
-- You can also edit code manually and run commands in the terminal
+For general prompting tips, AI model selection, and planning mode, see the **[Prompting Guide](./3_prompting_design.md)**.
 
 ## First Prompt
 
@@ -55,27 +51,6 @@ Use the provided external REST API - all queries and mutations were generated in
 ```
 
 Bolt should replace the mock authentication logic to use the accessToken which the Backend provides. Make sure it did this step correctly.
-
-## Design & Styling
-
-By default, Bolt apps may look "bland" because the AI by default only styles components via props from the generated theme (Atlas defaults unless changed).
-
-**If you have a design or concept available:**
-
-- Generate your theme from Figma and override the defaults
-- Provide Bolt with screenshots, mockups, or design references
-- Tell it explicitly to match the design, including colors
-- Bolt will implement the design and use appropriate colors beyond blue
-- If allowed, you may tell it to use `style` overrides on the components to give it more freedom
-
-Example:
-
-```
-Here's a screenshot of the design I want. Implement this page matching the design,
-including the color scheme shown in the image.
-```
-
----
 
 # Rules & Possible Pitfalls
 
