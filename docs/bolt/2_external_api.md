@@ -19,7 +19,12 @@ Use this mode when the backend is already developed or being developed in parall
      };
      ```
 
-3. **Generate data layer**
+3. **Change API URL**
+
+  - Open `constants/api.ts`
+  - Change value to the base URL of your backend
+
+4. **Generate data layer**
    ```bash
    npm run openapi:gen
    ```

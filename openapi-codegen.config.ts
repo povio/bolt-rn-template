@@ -5,11 +5,13 @@ const config: OpenAPICodegenConfig = {
   input: "https://api.dev.pov.io/api/docs-json", // External deployed backend
   output: "./openapi",
   tsPath: "@/openapi",
-  errorHandlingImportPath: "@/utils/vendor/error-handling",
+  restClientImportPath: "@/utils/rest/appRestClient",
   replaceOptionalWithNullish: true,
-  infiniteQueries: true,
-  standalone: true,
+  infiniteQueries: false,
+  builderConfigs: false,
+  mutationEffects: false,
   acl: false,
+  checkAcl: false,
 };
 
 export default config;
