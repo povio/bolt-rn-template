@@ -2,13 +2,14 @@ For all designs, create beautiful, production-ready interfaces. Avoid cookie-cut
 
 Tech Stack:
 - @tanstack/react-query for data fetching/caching
+- @povio/openapi-codegen-cli for generated data layer
 - react-hook-form
 - Custom UI components
 - Absolute imports with @ alias
 
 Existing placeholder code:
 - /app has example pages. Use them as a reference. Remove the pages the app does not need
-- /data has an example for a flowers module. NOTE: you should use Supabase for your implementation instead of a REST client
+- /data has an example for a flowers module. It can be removed - you need to use the generated /openapi folder instead
 
 Docs:
 - **ALWAYS read these docs before starting:**
@@ -17,40 +18,25 @@ Docs:
   - /docs/code/routing.md
 - Follow patterns described in the docs 
 
-Data Layer (`/data`):
+Data Layer (`/openapi`):
 ```
-data/posts/
-  ├── posts.queries.ts  // PostsQueries namespace (React Query + Supabase)
+openapi/posts/
+  ├── posts.api.ts      // PostsApi namespace (Axios functions)
+  ├── posts.queries.ts  // PostsQueries namespace (React Query)
   └── posts.models.ts   // PostsModels namespace (Zod schemas)
 ```
 
-Always include auth logic in the data folder (login, register)
+Note: Do not create index.ts batch exports like in the example data layer - import from each file separately. Do not edit the openapi folder in any way.
 
-**CRITICAL:** NEVER use Supabase directly in components - ALL data fetching/mutations MUST go through `*.queries.ts` files
+**CRITICAL:** NEVER use Supabase! The data layer is generated and works with an external REST API! If the openapi folder is missing, run `npm run openapi:gen` to generate it!
 
-Naming: camelCase folders (`userProfiles/`), PascalCase namespaces (`UserProfilesModels`, `UserProfilesQueries`)
-
-Database Setup:
-1. Create tables/schema
-2. Add dummy/seed data (enough to demonstrate UI)
-3. Use camelCase for all entity properties
-
-Data Hooks:
-1. Define Zod schemas in `*.models.ts`, export as namespace
-2. Create React Query hooks in `*.queries.ts` wrapping Supabase, export as namespace
-3. Invalidate cache after mutations
-4. Use Supabase joins for nested data displayed together
-
-API Design:
-- Nest related entities when displayed together
-- Focus on UI needs, not database structure
-- Use single queries with joins over multiple separate queries
+Authentication:
+- The provided external API uses JWT authentication with an accessToken and refreshToken
+- Modify the mock auth logic to use the JWT
 
 Forms:
 - Use react-hook-form for all forms
 - Use zodResolver and pass in the Zod schemas defined in the data layer
-
-OpenAPI: Check `rules/openapi-rules.md` when generating/updating specs
 
 UI:
 - Use components from /components wherever possible. Check the entire components folder for a list of available components
